@@ -29,7 +29,7 @@
 
 @keyframes bg-change {
   from {
-    background-image: url(/bf.gif);
+    background-image: URL("bf.gif");
   }
 
   to {
