@@ -165,17 +165,15 @@ h1:hover span {
   }
 }
 
-#home::after {
-  content: "Made By Fahad"; /* The watermark text */
-  font-size: 4rem; /* Adjust the size of the watermark */
-  color: rgba(255, 255, 255, 0.2); /* Set a light color with transparency */
-  position: absolute;
-  bottom: 10%; /* Position at the bottom of the page */
-  right: 10%; /* Position at the right side */
-  transform: rotate(-45deg); /* Rotate the watermark text */
-  z-index: -1; /* Ensure it's behind the content */
-  pointer-events: none; /* Prevent the watermark from interfering with clicks */
+.watermark {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
   font-weight: bold;
-  letter-spacing: 2px;
-  white-space: nowrap;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none; /* Prevent interference with other elements */
 }
