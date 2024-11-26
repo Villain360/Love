@@ -33,7 +33,7 @@
   }
 
   to {
-    background-image: url(/bf.gif);
+    background-image: url("bf.gif");
   }
 }
 
