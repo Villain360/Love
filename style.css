@@ -7,12 +7,12 @@
 #home {
   width: 100%;
   height: 100vh;
-  background-image: url("bf.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(15, 13, 14, 0.459);
-  background-blend-mode: overlay;
+  background-image: url("new.gif"), url("bf.gif");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-color: rgba(15, 13, 14, 0.5); /* Adds a subtle dark overlay */
+  background-blend-mode: overlay, normal; /* Blend GIF over the background image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +29,10 @@
 
 @keyframes bg-change {
   from {
-    background-image: URL("bf.gif");
+    background-image: url("new.gif"), url("bf.gif");
   }
-
   to {
-    background-image: url("bf.gif");
+    background-image: url("bf.gif"), url("new.gif");
   }
 }
 
@@ -162,25 +161,5 @@ h1:hover span {
   }
   .right {
     height: 22vw;
-  }
-}
-
-.decorative-gif {
-  width: 200px; /* Adjust the size of the GIF */
-  height: auto; /* Keep the aspect ratio */
-  position: absolute; /* Make it easy to place */
-  top: 20%; /* Adjust the vertical position */
-  left: 20%; /* Adjust the horizontal position */
-  z-index: 5; /* Ensure it appears above background elements */
-  animation: float 5s infinite ease-in-out; /* Optional animation for floating effect */
-}
-
-/* Optional floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
