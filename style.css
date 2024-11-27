@@ -165,15 +165,22 @@ h1:hover span {
   }
 }
 
-.watermark {
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
-  font-weight: bold;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none; /* Prevent interference with other elements */
+.decorative-gif {
+  width: 200px; /* Adjust the size of the GIF */
+  height: auto; /* Keep the aspect ratio */
+  position: absolute; /* Make it easy to place */
+  top: 20%; /* Adjust the vertical position */
+  left: 20%; /* Adjust the horizontal position */
+  z-index: 5; /* Ensure it appears above background elements */
+  animation: float 5s infinite ease-in-out; /* Optional animation for floating effect */
+}
+
+/* Optional floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
